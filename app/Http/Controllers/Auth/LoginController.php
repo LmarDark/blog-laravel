@@ -24,6 +24,17 @@ class LoginController extends Controller
 
         return back()->withErrors([
             'username' => 'As credenciais fornecidas não são válidas.',
+            'password' => 'As credenciais fornecidas não são válidas.',
         ])->onlyInput('username');
+    }
+
+    public function logout()
+    {
+        auth()->logout();
+
+        request()->session()->invalidate();
+        request()->session()->regenerateToken();
+
+        return redirect()->intended('login');
     }
 }

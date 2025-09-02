@@ -22,8 +22,8 @@ class LoginRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'username' => 'required|string|max:255|unique:users,username',
-            'password' => 'required|string|min:8|confirmed',
+            'username' => 'required|string|max:255',
+            'password' => 'required|string|min:8',
         ];
     }
 
@@ -38,7 +38,6 @@ class LoginRequest extends FormRequest
             'password.required' => 'A senha é obrigatória.',
             'password.string'   => 'A senha deve ser um texto válido.',
             'password.min'      => 'A senha deve ter pelo menos :min caracteres.',
-            'password.confirmed'=> 'As senhas não coincidem.',
         ];
     }
 }
