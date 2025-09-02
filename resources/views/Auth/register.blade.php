@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrar</title>
+    <title>{{ config('app.name') }} - Registrar</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 min-h-screen flex items-center justify-center">
@@ -61,7 +61,7 @@
         <div class="mt-4 text-center">
             <p class="text-sm text-gray-600">
                 Já tem uma conta?
-                <a href="{{ route('welcome') }}" class="text-green-600 hover:text-green-800 font-semibold">
+                <a href="{{ route('login') }}" class="text-green-600 hover:text-green-800 font-semibold">
                     Faça login
                 </a>
             </p>
