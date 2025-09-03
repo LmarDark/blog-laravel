@@ -1,6 +1,6 @@
 # Blog Laravel
 
-Este é um projeto de blog desenvolvido com o framework Laravel. O objetivo é fornecer uma plataforma simples e moderna para publicação de posts, gerenciamento de usuários e personalização de perfis.
+Este é um projeto de blog desenvolvido com o framework Laravel. O objetivo é fornecer uma plataforma simples e moderna para publicação de posts e personalização de perfis.
 
 ## Funcionalidades
 
