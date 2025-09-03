@@ -12,7 +12,6 @@
 
         <form action="{{ route('register') }}" method="POST">
             @csrf
-
             <div class="mb-4">
                 <input
                     type="text"

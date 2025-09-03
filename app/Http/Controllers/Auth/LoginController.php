@@ -35,6 +35,6 @@ class LoginController extends Controller
         request()->session()->invalidate();
         request()->session()->regenerateToken();
 
-        return redirect()->intended('login');
+        return redirect()->route('blog');
     }
 }

@@ -18,6 +18,16 @@ return new class extends Migration
             $table->timestamps();
         });
 
+        Schema::create('posts', function (Blueprint $table) {
+            $table->id();
+            $table->string('title');
+            $table->string('author');
+            $table->string('category')->nullable();
+            $table->text('excerpt')->nullable();
+            $table->string('image')->nullable();
+            $table->timestamps();
+        });
+
         Schema::create('sessions', function (Blueprint $table) {
             $table->string('id')->primary();
             $table->foreignId('user_id')->nullable()->index();
@@ -34,6 +44,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('users');
+        SChema::dropIfExists('posts');
         Schema::dropIfExists('sessions');
 
         Schema::dropIfExists('password_reset_tokens');

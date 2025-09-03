@@ -8,6 +8,6 @@ class BlogController extends Controller
 {
     public function index()
     {
-        return view('blog');
+        return view('blog')->with('posts', \App\Models\Post::all());
     }
 }
