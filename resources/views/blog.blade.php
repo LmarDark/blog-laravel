@@ -15,7 +15,7 @@
                 </div>
                 <div class="flex items-center space-x-4">
                     @auth
-                        <span class="text-sm text-gray-600">Olá, {{ auth()->user()->username ?? 'Usuário' }}!</span>
+                        <span class="text-sm text-gray-600">Olá, {{ auth()->user()->username }}!</span>
                         <a href="{{ route('logout') }}" class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition duration-200">
                             Sair
                         </a>
