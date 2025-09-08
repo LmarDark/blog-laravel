@@ -20,7 +20,7 @@ Route::post('/register', [RegisterController::class, 'register'])->name('registe
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 
 Route::get('/profile', [ProfileController::class, 'index'])->name('profile')->middleware('auth');
-Route::post('/profile/create', [ProfileController::class, 'create'])->name('profile.create')->middleware('auth');
+Route::post('/profile/create', [PostController::class, 'create'])->name('profile.create')->middleware('auth');
 Route::post('/profile/update', [ProfileController::class, 'update'])->name('profile.post')->middleware('auth');
 Route::get('profile/{username}', [ProfileController::class, 'show'])->name('profile.show')->middleware('auth');
 Route::post('profile/delete/{id}', [ProfileController::class, 'delete'])->name('profile.delete')->middleware('auth');

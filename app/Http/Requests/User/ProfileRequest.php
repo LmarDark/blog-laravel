@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests\User;
 
+use Illuminate\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
 
 class ProfileRequest extends FormRequest
@@ -22,8 +23,25 @@ class ProfileRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'username' => 'required|string|max:255|unique:users,username,' . auth()->id(),
-            'bio' => 'nullable|string|max:500',
+            'username' => [
+                'required',
+                'string',
+                'max:255',
+                Rule::unique('users', 'username')->ignore(auth()->id()),
+            ],
+            'bio' => [
+                'nullable',
+                'string',
+                'max:500',
+            ],
+        ];
+    }
+
+    public function messages(): array
+    {
+        return [
+            'username.unique' => 'Este nome de usuário já está em uso.',
+            'username.required' => 'O nome de usuário é obrigatório.',
         ];
     }
 }
