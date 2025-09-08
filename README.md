@@ -72,10 +72,13 @@ Este é um projeto de blog desenvolvido com o framework Laravel. O objetivo é f
 - `composer test` - Executa os testes automatizados
 - `php artisan migrate:fresh --seed` - Refaz o banco e executa os seeders
 
+## Pendências do Projeto
+- Adicionar erro quando já existir um usuário (Profile.blade.php)
+- Teste unitários
+- Comentários e curtidas
+
 ## Licença
 
 Este projeto está licenciado sob a licença MIT.
 
 ---
-
-Desenvolvido com Laravel ❤️
