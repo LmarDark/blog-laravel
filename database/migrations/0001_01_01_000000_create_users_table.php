@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('username')->unique();
             $table->string('password');
+            $table->string('bio')->nullable();
             $table->timestamps();
         });
 
@@ -23,8 +24,8 @@ return new class extends Migration
             $table->string('title');
             $table->string('author');
             $table->string('category')->nullable();
-            $table->text('excerpt')->nullable();
-            $table->string('image')->nullable();
+            $table->text('content');
+            $table->integer('likes')->default(0);
             $table->timestamps();
         });
 
